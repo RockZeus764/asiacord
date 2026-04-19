@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsiaCord - Selfbots & More</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+        }
+        .bounce-hover {
+            transition: all 0.3s ease;
+        }
+        .bounce-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="glass-effect fixed w-full z-50 top-0 py-4 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                AsiaCord
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-purple-300 transition">Home</a>
+                <a href="#selfbots" class="hover:text-purple-300 transition">Selfbots</a>
+                <a href="#features" class="hover:text-purple-300 transition">Features</a>
+                <a href="#" class="hover:text-purple-300 transition" onclick="showTerms()">Terms</a>
+                <a href="https://discord.gg/asiacord" target="_blank" class="bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded-full font-semibold transition-all duration-300 bounce-hover">
+                    <i class="fab fa-discord mr-2"></i>Discord
+                </a>
+            </div>
+            <div class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-20 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                AsiaCord Selfbots
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-purple-100">
+                Powerful, unlimited selfbots for Discord. Trusted by thousands.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <a href="#selfbots" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-4 rounded-full text-xl font-semibold bounce-hover neon-glow">
+                    Get Started
+                </a>
+                <a href="https://discord.gg/asiacord" target="_blank" class="border-2 border-purple-400 hover:border-purple-300 px-12 py-4 rounded-full text-xl font-semibold bounce-hover">
+                    Join Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selfbots Section -->
+    <section id="selfbots" class="py-20 px-6 md:px-12 bg-black/20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Unlimited Selfbots
+            </h2>
+            <div id="selfbotList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Selfbots will be generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                Why Choose Us?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-effect p-8 rounded-2xl text-center bounce-hover">
+                    <i class="fas fa-infinity text-5xl text-purple-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Unlimited Stock</h3>
+                    <p class="text-purple-200">Never run out of selfbots. Infinity supply.</p>
+                </div>
+                <div class="glass-effect p-8 rounded-2xl text-center bounce-hover">
+                    <i class="fas fa-dollar-sign text-5xl text-green-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Free Forever</h3>
+                    <p class="text-purple-200">0 cost. Always free for everyone.</p>
+                </div>
+                <div class="glass-effect p-8 rounded-2xl text-center bounce-hover">
+                    <i class="fas fa-shield-alt text-5xl text-blue-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">100% Safe</h3>
+                    <p class="text-purple-200">Trusted by 100+ users worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-12 bg-black/30">
+        <div class="max-w-7xl mx-auto text-center space-y-6">
+            <div class="glass-effect inline-block px-8 py-4 rounded-full mb-8">
+                <div class="text-2xl font-bold mb-2" id="viewCount">Viewed by 1,247</div>
+            </div>
+            
+            <div class="text-2xl font-bold text-green-400 mb-4">
+                Trusted by 100+ people
+            </div>
+            
+            <div class="space-y-4">
+                <div onclick="showTerms()" class="glass-effect cursor-pointer px-8 py-4 rounded-full inline-block hover:bg-white/20 transition">
+                    Terms - We do not abuse your token or steal/grab/log anything. We are trusted by many people.
+                </div>
+                <div class="text-lg text-purple-200">
+                    More Projects / <a href="#" class="hover:text-purple-300">MobVault Vanity in Discord</a>
+                </div>
+            </div>
+            
+            <a href="https://discord.gg/asiacord" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-4 rounded-full text-xl font-semibold bounce-hover neon-glow inline-block">
+                <i class="fab fa-discord mr-2"></i>Join Our Discord
+            </a>
+        </div>
+    </footer>
+
+    <!-- Selfbot Modal -->
+    <div id="selfbotModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-6">
+        <div class="glass-effect rounded-3xl p-8 md:p-12 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 id="selfbotTitle" class="text-3xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">Selfbot 1</h2>
+                <button onclick="closeModal()" class="text-2xl hover:text-red-400 transition">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="space-y-6">
+                <img src="https://cdn.discordapp.com/attachments/1494540087877304350/1495305121750454396/zeus_x_spark.gif?ex=69e5c2ea&is=69e4716a&hm=d4915d752bd26b4481742cac48ef3bf30d69429274a33f4d70f0704aab452c9c&" alt="Banner" class="w-full h-32 object-cover rounded-xl">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center p-4 bg-white/10 rounded-xl">
+                        <span class="font-semibold">Stock:</span>
+                        <span class="text-green-400 font-bold text-xl">Infinity</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 bg-white/10 rounded-xl">
+                        <span class="font-semibold">Price:</span>
+                        <span class="text-green-400 font-bold text-2xl">0</span>
+                    </div>
+                </div>
+                <button class="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 py-4 px-8 rounded-2xl font-bold text-xl bounce-hover neon-glow">
+                    Purchase Now (FREE)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let viewCount = 1247;
+        let selfbotCounter = 1;
+
+        // Update view count
+        function updateViewCount() {
+            viewCount++;
+            document.getElementById('viewCount').textContent = `Viewed by ${viewCount.toLocaleString()}`;
+        }
+
+        // Generate selfbots
+        function generateSelfbots() {
+            const container = document.getElementById('selfbotList');
+            let html = '';
+            
+            for (let i = 1; i <= 9; i++) {
+                html += `
+                    <div class="glass-effect p-8 rounded-3xl cursor-pointer bounce-hover group hover:scale-105 transition-all duration-300" onclick="openSelfbotModal(${i})">
+                        <img src="https://cdn.discordapp.com/attachments/1494540087877304350/1495305121750454396/zeus_x_spark.gif?ex=69e5c2ea&is=69e4716a&hm=d4915d752bd26b4481742cac48ef3bf30d69429274a33f4d70f0704aab452c9c&" alt="Banner" class="w-full h-32 object-cover rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">Selfbot ${i}</h3>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-sm opacity-75">Stock: <span class="text-green-400 font-bold">∞</span></span>
+                            <span class="text-2xl font-bold text-green-400">FREE</span>
+                        </div>
+                        <button class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-4 px-6 rounded-2xl font-bold text-lg neon-glow">
+                            Get Started
+                        </button>
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        // Open selfbot modal
+        function openSelfbotModal(num) {
+            document.getElementById('selfbotTitle').textContent = `Selfbot ${num}`;
+            document.getElementById('selfbotModal').classList.remove('hidden');
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('selfbotModal').classList.add('hidden');
+        }
+
+        // Terms modal
+        function showTerms() {
+            alert('We do not abuse your token or steal/grab/log anything. We are trusted by many people.');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize
+        window.addEventListener('load', () => {
+            updateViewCount();
+            generateSelfbots();
+            
+            // Update view count every 30 seconds
+            setInterval(updateViewCount, 30000);
+        });
+
+        // Close modal on outside click
+        document.getElementById('selfbotModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.15)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
